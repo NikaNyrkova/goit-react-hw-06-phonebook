@@ -1,0 +1,20 @@
+.item {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  border: solid transparent;
+  border-radius: 4px;
+  background-color: rgb(228, 231, 252);
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(252, 205, 245);
+}
