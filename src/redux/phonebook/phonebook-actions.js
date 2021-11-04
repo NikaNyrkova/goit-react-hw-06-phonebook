@@ -16,23 +16,3 @@ export default {
   deleteContact,
   filterContacts,
 };
-
-// import types from "./phonebook-types";
-// const addContact = ({ name, number }) => ({
-//     type: types.ADD,
-//     payload: {
-//         id: uuidv4(),
-//         name,
-//         number
-//     }
-// });
-
-// const deleteContact = (id) => ({
-//     type: types.DELETE,
-//     payload: id
-// });
-
-// const filterContacts = (value) => ({
-//     type: types.FILTER,
-//     payload: value
-// })

@@ -37,13 +37,3 @@ const store = configureStore({
 const persistor = persistStore(store);
 
 export default { store, persistor };
-
-// import { composeWithDevTools } from 'redux-devtools-extension';
-// import { createStore, combineReducers } from 'redux';
-// import { combineReducers } from 'redux';
-// const rootReducer = combineReducers({
-//     phonebookContacts: contactsReducer,
-//     phonebookFilter: filterReducer
-// });
-
-// export const store = createStore(rootReducer, composeWithDevTools());

@@ -1,10 +1,13 @@
 import React from "react";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import phonebookActions from "../../redux/phonebook/phonebook-actions";
 
 import st from "./Filter.module.css";
 
-const Filter = ({ value, onChange }) => {
+const Filter = () => {
+  const value = useSelector((state) => state.phonebookFilter);
+  const dispatch = useDispatch();
+
   return (
     <label className={st.label}>
       Find contact by name
@@ -12,18 +15,12 @@ const Filter = ({ value, onChange }) => {
         type="text"
         className={st.input}
         value={value}
-        onChange={onChange}
+        onChange={(e) =>
+          dispatch(phonebookActions.filterContacts(e.target.value))
+        }
       />
     </label>
   );
 };
 
-const mapStateToProps = (state) => ({
-  value: state.phonebookFilter,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  onChange: (e) => dispatch(phonebookActions.filterContacts(e.target.value)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default Filter;
